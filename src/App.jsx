@@ -8,7 +8,9 @@ function App() {
   const handleClick = async () => {
     const input = prompt("Enter color name");
     try {
+     
       const res = await axios.get(`https://backend-y2a9.onrender.com/${input}`);
+
       setData(input); 
       console.log(res.data);
     } catch (error) {
